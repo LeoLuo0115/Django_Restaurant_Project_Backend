@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+  background-color: white;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0 ;
+}
+
+nav > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+h1 + h1 {
+  margin-left: 3.5rem;
+}
+
+.nav--button {
+  margin-left: auto;
+}
+
+.nav--button > button {
+  /* background-color: #b4869f; */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 1.5rem;
+  cursor: pointer;
+}
+
+.hero-img {
+  color: white;
+  background-image: url(require/pizza.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 0!important;
+  font-size: 4rem;
+  height: 100vh;
+}
+
+.hero-img-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-customers {
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
