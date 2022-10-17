@@ -1,0 +1,58 @@
+/*页面样式*/
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background-color:#e6effe;
+}
+
+/*主要样式*/
+#picBox1{
+font-size:24px;font-weight:bold;text-align:center;color:black;
+}
+#loginDiv{
+	height:450px;width:800px;margin:10% auto;background-color:#FFFFFF;border-radius:15px;box-shadow:1px 1px 8px #DCDCDC;
+}
+#loginImg{
+	height:450px;width:400px;float:left;background-size:320px 550px;background-position:10px -50px;background-repeat:no-repeat;
+}
+#picBox1{
+	height:230px;width:300px;bottom:230px;margin:200px 50px 0px;
+}
+#loginBox{
+	height:450px;width:400px;float:left;
+}
+
+
+/*平板布局*/
+@media (max-width: 800px) {
+#loginDiv {
+	max-width:600px;
+	box-shadow:unset;}
+#loginImg{	
+	background-position:-140px -70px;
+	max-width:200px;
+	height:440px;
+	}
+#picBox1{
+	max-width:220px;height:auto;margin:240px 40px 0px;
+	}
+}
+
+/*手机布局*/
+@media (max-width: 600px) {
+#loginDiv{
+	margin:25%,auto;
+	height:600;
+	max-width:400px;
+	box-shadow:unset;}
+#loginImg{
+	display:none;
+}
+#loginBox{
+	height:auto;max-width:400px;float:left;margin:-50%,auto;
+}
+}

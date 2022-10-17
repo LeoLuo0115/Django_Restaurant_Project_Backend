@@ -12,7 +12,7 @@ SEAT_NUMBER_CHOICES = (
     (2, 'two seats'),
     (4, 'four seats'),
     (6, 'six seats'),
-    (6, 'eight seats')
+    (8, 'eight seats')
 )
 
 
@@ -40,6 +40,8 @@ class Booking(models.Model):
 
 
 """
+# 固定选择时间段 /  
+
 time
 9 10 11
 
