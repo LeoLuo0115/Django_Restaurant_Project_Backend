@@ -22,7 +22,6 @@ PAYMENT_METHOD_CHOICES = (
     (3, 'check')
 )
 
-
 class Seat(models.Model):
     number = models.IntegerField(choices=SEAT_NUMBER_CHOICES)
 
@@ -35,7 +34,7 @@ class Booking(models.Model):
     datetime = models.DateTimeField()
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     preferred_payment_method = models.IntegerField(choices=PAYMENT_METHOD_CHOICES, null=True, blank=True)
-    people_number = models.IntegerField(validators=(MaxValueValidator(14),))
+    people_number = models.IntegerField(valid1ators=(MaxValueValidator(14),))
     seats = models.ManyToManyField(Seat)  # 可以查这张桌子被哪些用户使用过
 
 
