@@ -34,13 +34,14 @@ def registered(request):
         # billing_address = "7as8d9"
         # value = 1
 
-        if username and 6 <= len(username) <= 16:
+        if username and 6 <= len(username) <= 14:
             user_list = User.objects.filter(username=username)
             print("user_list = ", user_list)
             if user_list:
                 result = {
-                    "code": "0000",
-                    "msg": "该账号已存在,this！！！"
+                    "code": "9999",
+                    # "msg": "该账号已存在！！！",
+                    "msg": "This account already exist！！！"
                 }
                 # return JsonResponse(result)
                 return HttpResponse(json.dumps(result, ensure_ascii=False),
@@ -56,8 +57,9 @@ def registered(request):
                     user_account.save()
                     # return render(request, "register_auth.html", {"year": "2022", "month": "10", "day": "17"})
                     result = {
-                        "code": "600",
-                        "msg": "注册成功！！！",
+                        "code": "200",
+                        # "msg": "注册成功！！！",
+                        "msg": "Register Successfully!",
                         "data": [
                             {
                                 "username": username
@@ -124,8 +126,13 @@ def login_post(request):
                     # login(request, user=user)
                     print("登陆成功")
                     result = {
-                        "code": "0000",
-                        "msg": "登陆成功！！！"
+                        "code": "200",
+                        "msg": "登陆成功！！！",
+                        "data": [
+                            {
+                                 # "value": value
+                            }
+                    ]
                     }
                     return HttpResponse(json.dumps(result, ensure_ascii=False),
                                         content_type="application/json; charset=utf-8")
@@ -143,7 +150,8 @@ def login_post(request):
                 print("username或者password不存在")
                 result = {
                     "code": "9999",
-                    "msg": "username或者password不存在！！！"
+                    # "msg": "username或者password不存在！！！"
+                    "msg": "username or password does not exists！！！"
                 }
                 # return JsonResponse(result)
                 return HttpResponse(json.dumps(result, ensure_ascii=False),
