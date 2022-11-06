@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render
 from apps.user.models import Account
 from django.http import HttpResponse, JsonResponse
@@ -53,7 +55,8 @@ def registered(request):
                     user1 = User.objects.create_user(username=username, password=password, is_staff=1)
                     user1.save()
                     user_account = Account(user=user1, name=username, mailing_address=mailing_address,
-                                           billing_address=billing_address, preferred_payment_method=value)
+                                           billing_address=billing_address, preferred_payment_method=value,
+                                           preferred_dish=random.randint(1, 4))
                     user_account.save()
                     # return render(request, "register_auth.html", {"year": "2022", "month": "10", "day": "17"})
                     result = {
@@ -185,6 +188,7 @@ def test(request):
     # user_objects = User.objects.raw("select * from auth_user where id=6")
     # print("user_objects = ", user_objects, type(user_objects))  # RawQueryset
     # for user_object in user_objects:
+
     #     print("user_object = ", user_object, type(user_object))
     #     print("username = ", user_object.username)
     #     print("username  id = ", user_object.id)

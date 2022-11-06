@@ -9,6 +9,12 @@ PAYMENT_METHOD_CHOICES = (
     (3, 'check')
 )
 
+DISHES = (
+    (1, '白菜1'),
+    (2, '白菜2'),
+    (3, '白菜3'),
+)
+
 
 class Account(models.Model):
     name = models.CharField(max_length=30)  # 字段长度
@@ -19,3 +25,5 @@ class Account(models.Model):
     preferred_payment_method = models.IntegerField(choices=PAYMENT_METHOD_CHOICES, null=True, blank=True)
     #  user来连接到 Django 自带的 User list / on_delete 当User删除，account也会被删除因为是一对一的关系
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # 首选菜品
+    preferred_dish = models.IntegerField(null=False, blank=True)

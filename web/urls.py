@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from django.views.static import serve
 from apps.user import views as user_views
+from apps.seats import views as seats_views
 from django.views.generic.base import RedirectView
 from web import settings
 
@@ -37,5 +38,8 @@ urlpatterns = [
 
     # 测试 数据库 orm 与数据库交互
     re_path("test", user_views.test, name="test"),
+
+    # 预定桌子
+    re_path("reserve", seats_views.reserve, name="reserve")
 
 ]
