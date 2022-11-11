@@ -10,9 +10,12 @@ PAYMENT_METHOD_CHOICES = (
 )
 
 DISHES = (
-    (1, '白菜1'),
-    (2, '白菜2'),
-    (3, '白菜3'),
+    (1, 'dish1'),
+    (2, 'dish2'),
+    (3, 'dish3'),
+    (4, 'dish4'),
+    (5, 'dish5'),
+    (6, 'dish6'),
 )
 
 

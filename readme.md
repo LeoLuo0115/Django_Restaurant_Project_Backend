@@ -1,3 +1,5 @@
+# restaurant
+
 ### Description:
 A restaurant chain has reached out to your team to build a reservation system.
 Here are the details:
@@ -30,8 +32,17 @@ o 允许不同的组合，业主容纳座位，例如：有人要求8位客人�
 系统应该跟踪高流量的日子/周末，并且需要保留费用，例如，7月4日需要在系统上使用有效的信用卡来保留桌子。
 o 通知用户不出现将有最低10美元的费用。
 
-### Note
+
+<br>
+
+***
+## Note
+### Frontend Pages   
+https://github.com/LeoLuo0115/VUE3_web_project
+
+
+<!---
 I ran the server in Docker, so you may now view the website from anywhere by entering the IP address.
 
 http://43.142.169.51:8000/
-
+-->

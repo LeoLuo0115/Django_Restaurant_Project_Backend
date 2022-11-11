@@ -125,12 +125,15 @@ def login_post(request):
             print("user = ", user, type(user))
             if user:
                 print("认证成功")
+                # print("authenticate successfully")
+
                 if user.is_active == 1:
                     # login(request, user=user)
                     print("登陆成功")
+                    # print("login successfully")
                     result = {
                         "code": "200",
-                        "msg": "登陆成功！！！",
+                        "msg": "登陆成功 / login successfully！！！",
                         "data": [
                             {
                                  # "value": value
