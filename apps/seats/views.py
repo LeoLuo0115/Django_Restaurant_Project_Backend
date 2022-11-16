@@ -9,7 +9,7 @@ import json
 from apps.seats.models import Desk, Booking
 
 
-def reserve(request):
+def reserve(request, desk_seats=None):
     print("预定post请求")
 
     print("request body", request.body)
@@ -147,6 +147,7 @@ def reserve(request):
             "data": [
                 {
                     "desk_number": desk_no_str,
+                    "seats_number": desk_seats,
                     "value": value
                 }
             ]
@@ -159,7 +160,8 @@ def reserve(request):
             "msg": "预定失败 / reserved failed！！！",
             "data": [
                 {
-                    "desk_number": desk_no_str,
+                    "desk_id": desk_no_str,
+                    "seats_number": desk_seats,
                     "value": value
                 }
             ]

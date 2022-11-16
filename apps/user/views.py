@@ -134,11 +134,11 @@ def login_post(request):
                     result = {
                         "code": "200",
                         "msg": "登陆成功 / login successfully！！！",
-                        "data": [
+                        "data":
                             {
-                                 # "value": value
+                                "username": username
                             }
-                    ]
+
                     }
                     return HttpResponse(json.dumps(result, ensure_ascii=False),
                                         content_type="application/json; charset=utf-8")
